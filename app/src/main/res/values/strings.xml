@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">השבוע</string>
+    <string name="title_activity_main">השבוע</string>
+    <string name="error_no_browser">אין אפליקציה שיכולה לפתוח את הקישור</string>
+    <string name="error_network_try_again">בעיית רשת: האם קיים חיבור לאינטרנט?\nלחצו כדי לנסות שנית</string>
+    <string name="error_network">בעיית רשת: האם קיים חיבור לאינטרנט?</string>
+    <string name="error_general_try_again">שגיאה לא ידועה\nלחצו כדי לנסות שנית</string>
+    <string name="error_general">שגיאה לא ידועה</string>
+    <string name="no_entries">אין רשומות</string>
+    <string name="action_filter">סינון</string>
+    <string name="action_open_source_licenses">רשיונות קוד פתוח</string>
+    <string name="action_reset">איפוס</string>
+    <string name="title_filter">סינון</string>
+    <string name="search">חיפוש…</string>
+    <string name="no_subject">(ללא נושא)</string>
+
+    <string name="notices_title">הודעות</string>
+    <string name="notices_close">סגור</string>
+
+
+    <string name="filter_by_favorites">לפי מועדפים</string>
+    <string name="filter_by_favorites_msg">הצג רק פריטים מועדפים</string>
+    <string name="filter_only_new_msg">הצג רק פריטים חדשים</string>
+    <string name="main_subjects_label">נושאים ראשיים</string>
+    <string name="subjects_label">תת נושאים</string>
+</resources>

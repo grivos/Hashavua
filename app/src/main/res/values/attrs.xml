@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FilterablesView">
+        <attr name="shouldDrawBackground" format="boolean" />
+        <attr name="colorHelperName" format="enum">
+            <enum name="subjects" value="1" />
+            <enum name="mainSubjects" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

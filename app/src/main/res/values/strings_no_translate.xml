@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_bold_path" translatable="false">fonts/Alef-Bold.ttf</string>
+    <string name="font_regular_path" translatable="false">fonts/Alef-Regular.ttf</string>
+</resources>

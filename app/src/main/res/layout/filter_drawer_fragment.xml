@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout" android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar android:id="@+id/filterToolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorAccent" app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:textSize="@dimen/filter_title_text_size"
+                android:text="@string/title_filter"
+                style="@style/ToolbarTitle"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+            <com.invariantlabs.hashavua.view.FilterCountView
+                android:id="@+id/filterCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="0px"
+                android:layout_height="0px"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/search"
+                    android:nextFocusUp="@id/input_search"
+                    android:nextFocusLeft="@id/input_search"
+                    android:background="@android:color/transparent"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/onlyFavoritesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="@string/filter_by_favorites_msg"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/onlyFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/onlyNewLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="@string/filter_only_new_msg"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/onlyNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="@string/main_subjects_label"
+                android:layout_marginBottom="16dp"
+                fontPath="@string/font_bold_path"
+                tools:ignore="MissingPrefix" />
+
+            <com.invariantlabs.hashavua.view.FilterablesView
+                android:id="@+id/mainSubjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:colorHelperName="mainSubjects"/>
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="@string/subjects_label"
+                android:layout_marginBottom="16dp"
+                fontPath="@string/font_bold_path"
+                tools:ignore="MissingPrefix" />
+
+            <com.invariantlabs.hashavua.view.FilterablesView
+                android:id="@+id/subjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:colorHelperName="subjects"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
